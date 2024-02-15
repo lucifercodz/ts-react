@@ -1,7 +1,11 @@
+import React from "react"
 
+type ButtonProps = {
+    handleclick: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void
+}
 
-export const Button = () => {
+export const Button = (props: ButtonProps) => {
     return (
-        <div></div>
+        <button onClick={(event) => props.handleclick(event, 1)}>Click</button>
     )
 }
