@@ -15,6 +15,8 @@ import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import { User } from './components/state/User';
+import { Counter } from './components/state/Counter';
 
 function App() {
   const personName = {
@@ -115,6 +117,18 @@ function App() {
               caseSensitive
               path="/logInOut" 
               element={<LoggedIn/>}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/user" 
+              element={<User />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/counter" 
+              element={<Counter />}>
             </Route>
           </Routes>
       </Router>
