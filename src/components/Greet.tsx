@@ -1,8 +1,5 @@
-type GreetPropes = {
-    name: string,
-    message?:number,
-    Islogin:boolean
-}
+import { GreetPropes } from "./Props.type"
+
 export const Greet = (props: GreetPropes) => {
     let { message = 5} = props
     return (
