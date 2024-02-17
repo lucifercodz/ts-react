@@ -5,7 +5,7 @@ export const MenuBar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+        {/* <a className="navbar-brand" href="#">
           Navbar
         </a>
         <button
@@ -18,7 +18,7 @@ export const MenuBar = () => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
