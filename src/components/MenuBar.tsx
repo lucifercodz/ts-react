@@ -92,6 +92,12 @@ export const MenuBar = () => {
                     Counter
                 </Link>
             </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/t-box">
+                    T-Box
+                </Link>
+            </li>
           </ul>
         </div>
       </nav>

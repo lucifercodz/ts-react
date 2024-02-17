@@ -17,6 +17,8 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { User } from './components/state/User';
 import { Counter } from './components/state/Counter';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 
 function App() {
   const personName = {
@@ -129,6 +131,16 @@ function App() {
               caseSensitive
               path="/counter" 
               element={<Counter />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/t-box" 
+              element={
+                <ThemeContextProvider>
+                  <Box />
+                </ThemeContextProvider>
+              }>
             </Route>
           </Routes>
       </Router>
