@@ -98,6 +98,24 @@ export const MenuBar = () => {
                     T-Box
                 </Link>
             </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/text-user">
+                    T-User
+                </Link>
+            </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/dom-ref">
+                    Dom-Ref
+                </Link>
+            </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/mutable-ref">
+                    Mutable-Ref
+                </Link>
+            </li>
           </ul>
         </div>
       </nav>

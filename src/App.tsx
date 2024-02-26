@@ -19,6 +19,9 @@ import { User } from './components/state/User';
 import { Counter } from './components/state/Counter';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
+import { UsercontextProvider } from './components/context/Usercontext';
+import { DomRef } from './components/ref/DomRef';
+import { MutableRef } from './components/ref/MutableRef';
 
 function App() {
   const personName = {
@@ -141,6 +144,28 @@ function App() {
                   <Box />
                 </ThemeContextProvider>
               }>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/text-user" 
+              element={
+                <UsercontextProvider>
+                  <User />
+                </UsercontextProvider>
+              }>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/dom-ref" 
+              element={<DomRef />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/mutable-ref" 
+              element={<MutableRef />}>
             </Route>
           </Routes>
       </Router>
