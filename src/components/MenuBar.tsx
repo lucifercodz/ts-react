@@ -116,6 +116,18 @@ export const MenuBar = () => {
                     Mutable-Ref
                 </Link>
             </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/class-counter">
+                    Class-Counter
+                </Link>
+            </li>
+
+            <li className="nav-item">
+                <Link className="nav-link" to="/auth-profile">
+                    Auth-Profile
+                </Link>
+            </li>
           </ul>
         </div>
       </nav>

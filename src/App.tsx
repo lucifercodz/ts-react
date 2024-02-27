@@ -22,6 +22,9 @@ import { Box } from './components/context/Box';
 import { UsercontextProvider } from './components/context/Usercontext';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
+import { ClassCounter } from './components/class/ClassCounter';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 
 function App() {
   const personName = {
@@ -166,6 +169,18 @@ function App() {
               caseSensitive
               path="/mutable-ref" 
               element={<MutableRef />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/class-counter" 
+              element={<ClassCounter message='This is Counter' />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/auth-profile" 
+              element={<Private isLoggedin={true} component={Profile} />}>
             </Route>
           </Routes>
       </Router>
