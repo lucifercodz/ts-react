@@ -27,6 +27,7 @@ import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
 import { GenList } from './components/generics/GenList';
 import { RandomNumber } from './components/restriction/RandomNumber';
+import { Toast } from './components/templateliterals/Toast';
 
 function App() {
   const personName = {
@@ -225,6 +226,12 @@ function App() {
               caseSensitive
               path="/r-number" 
               element={<RandomNumber value={10} isnegative />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/toast" 
+              element={<Toast position="center" />}>
             </Route>
           </Routes>
       </Router>
