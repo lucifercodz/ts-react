@@ -25,6 +25,8 @@ import { MutableRef } from './components/ref/MutableRef';
 import { ClassCounter } from './components/class/ClassCounter';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { GenList } from './components/generics/GenList';
+import { RandomNumber } from './components/restriction/RandomNumber';
 
 function App() {
   const personName = {
@@ -181,6 +183,48 @@ function App() {
               caseSensitive
               path="/auth-profile" 
               element={<Private isLoggedin={true} component={Profile} />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/gen-list" 
+              element={
+                // <GenList
+                //   items={['bat', 'cat', 'rat']}
+                //   onClick={(item) => console.log(item)}
+                // />
+                // <GenList
+                //   items={[1, 2, 3]}
+                //   onClick={(item) => console.log(item)}
+                // />
+                <GenList 
+                  items={[
+                    {
+                      id: 1,
+                      first : 'bat',
+                      last : 'ji',
+                    },
+                    {
+                      id: 2,
+                      first : 'cat',
+                      last : 'ji',
+                    },
+                    {
+                      id: 3,
+                      first : 'rat',
+                      last : 'ji',
+                    },
+                  ]}
+                  onClick={(item) => console.log(item)}
+                />
+              }
+            >
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/r-number" 
+              element={<RandomNumber value={10} isnegative />}>
             </Route>
           </Routes>
       </Router>
