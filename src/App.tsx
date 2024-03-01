@@ -28,6 +28,7 @@ import { Profile } from './components/auth/Profile';
 import { GenList } from './components/generics/GenList';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateliterals/Toast';
+import { HtmlButton } from './components/html/HtmlButton';
 
 function App() {
   const personName = {
@@ -232,6 +233,17 @@ function App() {
               caseSensitive
               path="/toast" 
               element={<Toast position="center" />}>
+            </Route>
+
+            <Route 
+              caseSensitive
+              path="/html-button" 
+              element={
+                <HtmlButton variant='primary' onClick={() => console.log('Clicked')}>
+                  primary button 
+                </HtmlButton>
+              }
+            >
             </Route>
           </Routes>
       </Router>
