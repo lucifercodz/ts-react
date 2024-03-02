@@ -29,6 +29,7 @@ import { GenList } from './components/generics/GenList';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateliterals/Toast';
 import { HtmlButton } from './components/html/HtmlButton';
+import { PolyText } from './components/polymorphic/PolyText';
 
 function App() {
   const personName = {
@@ -247,6 +248,18 @@ function App() {
             </Route>
           </Routes>
       </Router>
+
+      <PolyText as='h1' size='lg'>
+        Heading
+      </PolyText>
+
+      <PolyText as='p' size='md'>
+        Paragraph
+      </PolyText>
+
+      <PolyText as='label' htmlFor='someid' size='md' color='primary'>
+        Label
+      </PolyText>
     </div>
   );
 }
